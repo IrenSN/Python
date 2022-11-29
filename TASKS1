@@ -1,0 +1,59 @@
+# ЗАДАЧА 1
+
+number = int(input("Enter number from 1 to 7: "))
+
+if number < 1 or number > 7:
+    print('You had entered wrong number. Please try again...')
+elif number > 5:
+    print('Wuw! It is weekend')
+else:
+    print('Upps, it is working day')
+    
+#ЗАДАЧА 2
+for x in range(2):
+    for y in range(2):
+        for z in range(2):
+            if not (x or y or z) == (not x and not y and not z):
+                print(f'Утверждение ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z ИСТИНА при x = {x}, y={y}, z={z}')
+# ЗАДАЧА 3
+
+x = int(input('Enter x≠0:'))
+y = int(input('Enter y≠0:'))
+
+if x == 0 and y == 0:
+    print('There must be no "0"')
+elif x > 0 and y > 0:
+    print(
+        f'While x = {x} и y = {y} point is in the plane 1 ')
+elif x < 0 and y > 0:
+    print(
+        f'While x = {x} и y = {y} point is in the plane 2 ')
+elif x < 0 and y < 0:
+    print(
+        f'While x = {x} и y = {y} point is in the plane 3 ')
+elif x > 0 and y < 0:
+    print(
+        f'ПWhile x = {x} и y = {y} point is in the plane 4 ')  
+
+# ЗАДАЧА 4
+X = int(input('Введите номер четверти плоскости координат: '))
+
+if X == 1:
+    print('Первая четверть оси координат - x > 0 y > 0')
+elif X == 2:
+    print('Вторая четверть оси координат - x < 0 y > 0')
+elif X == 3:
+    print('Третья четверть оси координат - x < 0 y < 0')
+elif X == 4:
+    print('Четвертая четверть оси координат - x > 0 y < 0')
+else:
+    print('Такого не бывает')
+# ЗАДАЧА 5
+ax = float(input('Enter the coordinates of point a along the axis  x:'))
+ay = float(input('Enter the coordinates of point a along the axis  y:'))
+bx = float(input('Enter the coordinates of point b along the axis  x:'))
+by = float(input('Enter the coordinates of point b along the axis  y:'))
+
+import math
+distans = math.sqrt((ax-bx)**2+(ay-by)**2)
+print(f'Distance between point a to point b = {distans}' )
